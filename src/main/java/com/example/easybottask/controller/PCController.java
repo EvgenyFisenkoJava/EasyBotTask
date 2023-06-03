@@ -13,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping(value = "/api/v1/pc")
 public class PCController {
+
     private final PCService pcService;
 
     @PostMapping("/add")
@@ -25,7 +26,7 @@ public class PCController {
         return ResponseEntity.ok(pcService.updatePC(id, pc));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping()
     public ResponseEntity<PC> getById(@RequestParam Long id) {
         return ResponseEntity.ok(pcService.getPC(id));
     }

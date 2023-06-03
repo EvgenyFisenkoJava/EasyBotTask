@@ -10,8 +10,8 @@ import java.util.List;
 @RestControllerAdvice
 public class ExceptionHandler {
 
-    @org.springframework.web.bind.annotation.ExceptionHandler(ArgumentException.class)
-    public ResponseEntity<ErrorResponse> handleMyException(ArgumentException ex) {
+    @org.springframework.web.bind.annotation.ExceptionHandler(MyArgumentException.class)
+    public ResponseEntity<ErrorResponse> handleMyException(MyArgumentException ex) {
         List<String> errors = new ArrayList<>();
         errors.add(ex.getMessage());
         ErrorResponse response = new ErrorResponse(HttpStatus.BAD_REQUEST, errors);

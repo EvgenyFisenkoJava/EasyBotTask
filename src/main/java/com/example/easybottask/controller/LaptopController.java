@@ -26,7 +26,7 @@ public class LaptopController {
         return ResponseEntity.ok(laptopService.updateLaptop(id, laptop));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping()
     public ResponseEntity<Laptop> getById(@RequestParam Long id) {
         return ResponseEntity.ok(laptopService.getLaptop(id));
     }

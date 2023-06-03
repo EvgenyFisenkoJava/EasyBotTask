@@ -26,7 +26,7 @@ public class HardDriveController {
         return ResponseEntity.ok(hardDriveService.updateHardDrive(id, hardDrive));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping()
     public ResponseEntity<HardDrive> getById(@RequestParam Long id) {
         return ResponseEntity.ok(hardDriveService.getHardDrive(id));
     }
