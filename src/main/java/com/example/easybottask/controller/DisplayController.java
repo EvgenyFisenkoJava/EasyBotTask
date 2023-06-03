@@ -26,7 +26,7 @@ public class DisplayController {
         return ResponseEntity.ok(displayService.updateDisplay(id, display));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping()
     public ResponseEntity<Display> getById(@RequestParam Long id) {
         return ResponseEntity.ok(displayService.getDisplay(id));
     }

@@ -1,17 +1,17 @@
 package com.example.easybottask.model;
 
 
-
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
-
-import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 
 @MappedSuperclass
 @Data
+@EqualsAndHashCode
 public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
