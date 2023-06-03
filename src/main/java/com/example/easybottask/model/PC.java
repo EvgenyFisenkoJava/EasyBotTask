@@ -1,13 +1,14 @@
 package com.example.easybottask.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Table(name = "pc")
 @Data
 public class PC extends BaseEntity {
-    @Enumerated(EnumType.STRING)
     @Column(name = "type")
-    private PCType type;
+    private String type;
 }

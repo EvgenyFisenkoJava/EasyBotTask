@@ -7,7 +7,7 @@ import lombok.Data;
 @Table(name = "laptop")
 @Data
 public class Laptop extends BaseEntity {
-    @Enumerated(EnumType.STRING)
+
     @Column(name = "size")
-    private LaptopSize size;
+    private int size;
 }
