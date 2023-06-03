@@ -1,7 +1,12 @@
 package com.example.easybottask.model;
 
-import jakarta.persistence.*;
+
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.Data;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -16,7 +21,11 @@ public class BaseEntity {
     @Column(name = "manufacturer")
     private String manufacturer;
     @Column(name = "price")
+    @Positive
+    @NotNull(message = "no quantity entered")
     private BigDecimal price;
     @Column(name = "quantity")
-    private int quantity;
+    @Positive
+    @NotNull(message = "no quantity entered")
+    private Integer quantity;
 }
